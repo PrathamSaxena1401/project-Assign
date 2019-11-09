@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Rjit Classrooms</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style>
+        form div{
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse" style="background-color: royalblue; color: white;">
+  <div class="container-fluid">
+    <div class="navbar-header" style="color: white:important;">
+      <a class="navbar-brand" href="#">Rjit Classrooms</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/">Home</a></li>
+           <li><a href="/contact">Contact Admin</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user">Signup <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="/studentreg">As student</a></li>
+          <li><a href="/teacherreg">As teacher</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+    <h4>welcome {{ user[0] }}</h4>
+<div style="width: 50%; margin: 20px auto; border: 1px solid;">
+<form action="/im" method="post" style="width: 50%; margin: 30px auto;">
+    <input type="hidden" name="size" value="1000000">
+    <div>
+        <input type="file" name="image">
+    </div>
+    <div>
+        <textarea name="text" cols="40" rows="4" placeholder="say something about your file..."></textarea>
+    </div>
+    <div>
+        <strong><p>who will see it:</p></strong>
+        <input type="text" name="bch" placeholder="which branch students"></br></br>
+        <input type="number" name="year" placeholder="which year students"></br></br>
+        <input type="number" name="sem" placeholder="which semister students"></br></br>
+        <input type="text" name="sbc" placeholder="subject code"></br></br>
+       <b> date of submission:</b>
+        <input type="date" name="dsm" placeholder="date of submission"></br></br>
+
+    </div>
+    <div>
+        <button type="submit" class="btn btn-primary">Post</button>
+    </div>
+</form>
+</div>
+</body>
+</html>
